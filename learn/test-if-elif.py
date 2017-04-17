@@ -20,29 +20,3 @@ elif age >= 8:
     print('You are older than me')
 elif age <= 6:
     print('You are younger than me')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
