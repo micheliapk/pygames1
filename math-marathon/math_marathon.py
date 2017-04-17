@@ -20,7 +20,7 @@ def talk(words):
 print('**** Welcome to Michelia\'s Math Marathon !!!')
 talk('Welcome to Mikaylias Math Marathon')
 
-print('Enter 1 for Addition or 2 for Subtraction : ')
+print('Enter 1 for Addition or 2 for Subtraction or 3 for Multiplication: ')
 talk('hi, Do you want to do Addition or Subtraction')
 input_string = input()
 
