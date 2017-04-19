@@ -3,7 +3,7 @@ from random import randint
 
 from datetime import datetime
 
-TOTAL_QUESTIONS = 100
+TOTAL_QUESTIONS = 10
 def get_current_time():
     return datetime.now()
 
@@ -21,7 +21,7 @@ print('**** Welcome to Michelia\'s Math Marathon !!!')
 talk('Welcome to Mikaylias Math Marathon')
 
 print('Enter 1 for Addition or 2 for Subtraction or 3 for Multiplication: ')
-talk('hi, Do you want to do Addition or Subtraction')
+talk('hi, Do you want to do Addition or Subtraction or Multiplication')
 input_string = input()
 
 operation_input = 1
@@ -32,12 +32,17 @@ except:
     talk('Do not enter junk values. Enter a valid number')
     exit(0)
 
-if operation_input == 1:
+if operation_input == 1: #Addition
     operator = '+'
     operator_name = 'plus'
-else:
+
+elif operation_input == 2:#Subtraction
     operator = '-'
     operator_name = 'minus'
+
+elif operation_input == 3:#Multipication
+    operator = 'x'
+    operator_name = 'times'
 
 is_5mins_not_done = True
 start_time = get_current_time()
@@ -50,13 +55,21 @@ while is_5mins_not_done == True and questions_count < TOTAL_QUESTIONS:
     #test is not over. keep going
 
     questions_count += 1 # same as questions_count = questions_count + 1
-    top_number = randint(9,20)
-    bottom_number = randint(2,8)
 
     if operator == '+':
+        top_number = randint(9,20)
+        bottom_number = randint(2,8)
         correct_answer = top_number + bottom_number
-    else:
+
+    elif operator == '-':
+        top_number = randint(9,20)
+        bottom_number = randint(2,8)
         correct_answer = top_number - bottom_number
+
+    elif operator == 'x':
+        top_number = randint(2,6)
+        bottom_number = randint(0,12)
+        correct_answer = top_number * bottom_number
 
     print_question = 'Question #{0}:  {1} {2} {3} = ?'.\
                 format(questions_count, top_number, operator, bottom_number)
