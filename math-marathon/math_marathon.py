@@ -3,7 +3,6 @@ from random import randint
 
 from datetime import datetime
 
-TOTAL_QUESTIONS = 10
 def get_current_time():
     return datetime.now()
 
@@ -35,14 +34,17 @@ except:
 if operation_input == 1: #Addition
     operator = '+'
     operator_name = 'plus'
+    total_questions = 100
 
 elif operation_input == 2:#Subtraction
     operator = '-'
     operator_name = 'minus'
+    total_questions = 100
 
 elif operation_input == 3:#Multipication
     operator = 'x'
     operator_name = 'times'
+    total_questions = 25
 
 is_5mins_not_done = True
 start_time = get_current_time()
@@ -51,7 +53,7 @@ questions_count = 0
 score = 0
 wrong_questions_list = [] #empty list to hold wrong questions
 
-while is_5mins_not_done == True and questions_count < TOTAL_QUESTIONS:
+while is_5mins_not_done == True and questions_count < total_questions:
     #test is not over. keep going
 
     questions_count += 1 # same as questions_count = questions_count + 1
