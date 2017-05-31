@@ -19,8 +19,8 @@ def talk(words):
 print('**** Welcome to Michelia\'s Math Marathon !!!')
 talk('Welcome to Mikaylias Math Marathon')
 
-print('Enter 1 for Addition or 2 for Subtraction or 3 for Multiplication: ')
-talk('hi, Do you want to do Addition or Subtraction or Multiplication')
+print('Enter 1 for Addition or 2 for Subtraction or 3 for Multiplication or 4 for all: ')
+talk('hi, Do you want to do Addition or Subtraction or Multiplication or all')
 input_string = input()
 
 operation_input = 1
@@ -41,10 +41,14 @@ elif operation_input == 2:#Subtraction
     operator_name = 'minus'
     total_questions = 100
 
-elif operation_input == 3:#Multipication
+elif operation_input == 3:#Multiplication
     operator = 'x'
     operator_name = 'times'
     total_questions = 25
+
+elif operation_input == 4: # all
+    operator = 'all'
+    total_questions = 100
 
 is_5mins_not_done = True
 start_time = get_current_time()
@@ -53,10 +57,21 @@ questions_count = 0
 score = 0
 wrong_questions_list = [] #empty list to hold wrong questions
 
+real_operator = operator
+operator_list = ['+', '-', 'x']
+operator_name_list = ['plus', 'minus', 'times']
+
 while is_5mins_not_done == True and questions_count < total_questions:
     #test is not over. keep going
 
     questions_count += 1 # same as questions_count = questions_count + 1
+
+    if real_operator == 'all':
+        random_number = randint(0,2)
+        operator = operator_list[random_number]
+        operator_name = operator_name_list[random_number]
+    else:
+        operator = real_operator
 
     if operator == '+':
         top_number = randint(9,20)
