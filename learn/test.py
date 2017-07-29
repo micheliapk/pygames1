@@ -1,26 +1,14 @@
 #michelia's python playground
+#     HAVE ROBO FUN     #
 
-print('Tell me your age!')
-age_string = input()
+def multi_math(oz, whatever):
+    print('I answer math questions !!!')
+    answer = oz * whatever
 
-age = 0
+    print('answer is :', answer)
 
-try:
-    age = int(age_string)
-except:
-    print('Do not enter junk values. Enter a valid number')
-    exit(0)
-
-if age <= 0 or age > 120:
-    print('You are a liar')
-elif age == 7:
-    print('My age is 7 too')
-
-elif age >= 8:
-    print('You are older than me')
-elif age <= 6:
-    print('You are younger than me')
-
+multi_math( 951, 289 )
+#          o   w
 
 
 
