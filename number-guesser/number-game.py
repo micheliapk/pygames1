@@ -4,16 +4,21 @@ from random import randint
 def talk(words):
     system('say {0}'.format(words))
 
-answer = randint(1, 100)
+def number_guesser():
+    pass
 
-guess = None
+def you_guess():
+    answer = randint(1, 100)
 
-while guess != answer :
-    guess = int (input('Guess ?'))
-    if answer <  guess :
-        print('answer is less than your guess')
-    elif answer > guess:
-         print('answer is greater than your guess')
-    elif answer == guess:
-         print('answer is correct')
+    guess = None
 
+    while guess != answer :
+        guess = int (input('Please type your guess number ? '))
+        if answer <  guess :
+            print('answer is less than your guess')
+        elif answer > guess:
+             print('answer is greater than your guess')
+        elif answer == guess:
+             print('answer is correct')
+
+you_guess()
