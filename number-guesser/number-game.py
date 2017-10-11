@@ -21,4 +21,11 @@ def you_guess():
         elif answer == guess:
              print('answer is correct')
 
-you_guess()
+#you_guess()
+
+def find_mean (q,w):
+    mean = (q + w) / 2
+    return mean
+
+my_mean = find_mean(50,100)
+print('mean is {0}'.format(my_mean))
