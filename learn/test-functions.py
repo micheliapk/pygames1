@@ -11,3 +11,4 @@ def multigo(myInt):
 mult_number = int (input('Please type multiplying number ? '))
 
 multigo(mult_number)
+
