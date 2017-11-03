@@ -19,7 +19,11 @@ def get_float(min_number, max_number):
 
     return float_number
 
-#get_float(max_number=10)
+def talk_currency(value_1,value_2,operater):
+    print('Hi, I am Currency Quiz !!!')
+
+
+#get_float(max_number=10):
 operator = '+'
 questions_count = 0
 if operator == '+':
@@ -28,12 +32,19 @@ if operator == '+':
     correct_answer = top_number + bottom_number
     correct_answer = round(correct_answer, 2)
 
-print_question = '{0}:   ${1} {2} ${3} = ?'.\
-                format(questions_count, top_number, operator, bottom_number)
-print(print_question)
+talk_currency(top_number, bottom_number, operator)
+
+
+# print_question = '{0}:   ${1} {2} ${3} = ?'.\
+#                 format(questions_count, top_number, operator, bottom_number)
+# print(print_question)
+
+print('   ${0}'.format(top_number))
+print(' {0} ${1}'.format(operator, bottom_number))
+print('_________')
 
 #TODO: talk_currency(5.67, 2.2, '+') ==> ('what is 5 dollars and 67 cents plus 2 dollars and 2 cents ')
-input_string = input(': $ ')
+input_string = input('   $')
 try:
     student_answer = float(input_string)
 except:
@@ -44,4 +55,3 @@ if correct_answer == student_answer:
     print('You are correct')
 else:
     print('You are wrong. The correct answer is {0}'.format(correct_answer))
-
