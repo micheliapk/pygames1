@@ -30,8 +30,3 @@ print('my gender is {0}'.format (gender))
 
 
 
-
-
-
-
-

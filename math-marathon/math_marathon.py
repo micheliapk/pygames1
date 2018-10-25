@@ -19,7 +19,7 @@ def talk(words):
 print('**** Welcome to Michelia\'s Math Marathon !!!')
 talk('Welcome to Mikaylias Math Marathon')
 
-print('Enter 1 for Addition or 2 for Subtraction or 3 for Multiplication or 4 for all: ')
+print('Enter 1 for Addition/Subtraction or 2 for Multiplication or 3 for all: ')
 talk('hi, Do you want to do Addition or Subtraction or Multiplication or all')
 input_string = input()
 
@@ -32,21 +32,16 @@ except:
     exit(0)
 
 if operation_input == 1: #Addition
-    operator = '+'
-    operator_name = 'plus'
+    operator = 'plus_minus'
+    operator_name = 'plus_minus'
     total_questions = 100
 
-elif operation_input == 2:#Subtraction
-    operator = '-'
-    operator_name = 'minus'
-    total_questions = 100
-
-elif operation_input == 3:#Multiplication
+elif operation_input == 2:#Multiplication
     operator = 'x'
     operator_name = 'times'
     total_questions = 25
 
-elif operation_input == 4: # all
+elif operation_input == 3: # all
     operator = 'all'
     total_questions = 100
 
@@ -70,17 +65,21 @@ while is_5mins_not_done == True and questions_count < total_questions:
         random_number = randint(0,2)
         operator = operator_list[random_number]
         operator_name = operator_name_list[random_number]
+    elif real_operator == 'plus_minus':
+        random_number = randint(0, 1)
+        operator = operator_list[random_number]
+        operator_name = operator_name_list[random_number]
     else:
         operator = real_operator
 
     if operator == '+':
-        top_number = randint(9,20)
-        bottom_number = randint(2,8)
+        top_number = randint(9,30)
+        bottom_number = randint(2, top_number if top_number > 2 else 8)
         correct_answer = top_number + bottom_number
 
     elif operator == '-':
-        top_number = randint(9,20)
-        bottom_number = randint(2,8)
+        top_number = randint(9,30)
+        bottom_number = randint(2, top_number if top_number > 2 else 8)
         correct_answer = top_number - bottom_number
 
     elif operator == 'x':
@@ -112,7 +111,7 @@ while is_5mins_not_done == True and questions_count < total_questions:
 
     is_5mins_not_done = not is_5_minutes_done(start_time)
 
-percent_score = get_percent_score(questions_count, score)
+percent_score = int(get_percent_score(questions_count, score))
 print('You scored {0} % ({1}/{2})'. format(percent_score, score, questions_count))
 talk(' You scored {0} percent'.format (percent_score))
 
