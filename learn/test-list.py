@@ -16,7 +16,6 @@ print (colors)
 colors.insert(0, 'blue')
 print(colors)
 
-print ()
 
 
 
