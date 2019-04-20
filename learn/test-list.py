@@ -1,20 +1,21 @@
 #michelia's python playground****************
-colors = ['navy','purple','aqua','lavender']
+cat_breeds = ['persian','ragdoll','shorthair','bengal']
 
-print (colors[1]) #question 3
+print (cat_breeds[2]) #in python numbers start with 0
 
-#question 4
-colors[0] = 'pink'
+
+cat_breeds[3] = 'burmese'
 
 #question 5
-del colors[2]
+del cat_breeds[2]
 
 #question 6
-colors.append('red')
-print (colors)
+cat_breeds.append('syberian')
+print (cat_breeds)
 #question 7
-colors.insert(0, 'blue')
-print(colors)
+cat_breeds.insert(3, 'manx')
+print(cat_breeds)
+
 
 
 

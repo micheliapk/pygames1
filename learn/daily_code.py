@@ -1,22 +1,23 @@
-# HI! MICHELIA,WELCOME TO YOUR DAILY PRACTICE! #
+#WELCOME TO MICHELIA'S DAILY CODE
 
 print('Hi, what is your name !')
 
 name_string = input()
 
-print('How are you {0}'.format (name_string))
-
-
-print('Hi, what is your age?')
+print('{0}, what is your age?'.format(name_string))
 age_string = input()
 
-print('you are {0}'.format (age_string))
+print('you are {0} '.format (age_string))
 
 
 age = int(age_string)
 
-year = 2018
+year = 2019
 birth_date =(year-age)
-if age <= 0 or age > 120:
+if age <= 2 or age > 110 :
     print('Ha ha!Good joke!!!')
-print('You were born in {0}'.format(birth_date))
+    print('I am smarter than you think')
+print(' you were born in {0}'.format(birth_date))
+
+if age == 9 :
+    print('Hey! You are the same age as me!!')

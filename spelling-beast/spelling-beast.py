@@ -2960,7 +2960,7 @@ talk('Welcome to Mikaylias Spelling Beast!')
 secret_word_number = randint(0, len(spell_list_g3)-1)
 secret_word = spell_list_g3[secret_word_number]
 
-print(secret_word['word'])
+#print(secret_word['word'])
 
 talk('How do you spell the word {0}'.format(secret_word['word']))
 word_string = input()
