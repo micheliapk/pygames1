@@ -4,6 +4,7 @@
 #num=[11100989089080211, 1122001231231, 1121389798646546546565465]
 #num = [12, 6, 4, 3, 5]
 num=['elephants','lunch','can','ants','for','eat']
+
 #print(num[0])
 
 my_len = len(num)
@@ -28,7 +29,6 @@ for outer_count in range(0, my_len - 1):
             print('count = {}'.format(count))
             swap(outer_count, count)
 
-print('List1 ==> {}'.format(num))
 
 
 #    for count in range (1,my_len - 1):
