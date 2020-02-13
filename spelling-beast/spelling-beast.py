@@ -2955,20 +2955,46 @@ spell_list_g5 = [
     }
 ]
 
+spell_list_current = [
+    {'word': 'vocation', 'part_of_speech': ''},
+    {'word': 'vocal', 'part_of_speech': ''},
+    {'word': 'avocation', 'part_of_speech': ''},
+    {'word': 'vocalist', 'part_of_speech': ''},
+    {'word': 'addictive', 'part_of_speech': ''},
+
+    {'word': 'contradict', 'part_of_speech': ''},
+    {'word': 'dictation', 'part_of_speech': ''},
+    {'word': 'dictator', 'part_of_speech': ''},
+    {'word': 'predict', 'part_of_speech': ''},
+    {'word': 'verdict', 'part_of_speech': ''},
+]
+
 print('**** Welcome to Michelia\'s Spelling Beast!!!')
 talk('Welcome to Mikaylias Spelling Beast!')
-secret_word_number = randint(0, len(spell_list_g3)-1)
-secret_word = spell_list_g3[secret_word_number]
 
-#print(secret_word['word'])
+start_time = get_current_time()
+prev_word_number = -1
+spell_list = spell_list_current
 
-talk('How do you spell the word {0}'.format(secret_word['word']))
-word_string = input()
-if word_string  == secret_word['word']:
-    print('You are correct')
-    talk('You are correct')
-else:
-    print('You are wrong. This word is spelled like {0}'.format(secret_word['word']))
-    talk('You are wrong. This word is spelled like {0}'.format(secret_word ['word']))
+while not is_5_minutes_done(start_time):
+
+    secret_word_number = randint(0, len(spell_list)-1)
+
+    if secret_word_number == prev_word_number:
+        continue
+
+    secret_word = spell_list[secret_word_number]
+    prev_word_number = secret_word_number
+
+    #print(secret_word['word'])
+
+    talk('How do you spell the word {0}'.format(secret_word['word']))
+    word_string = input()
+    if word_string  == secret_word['word']:
+        print('You are correct')
+        talk('You are correct')
+    else:
+        print('You are wrong. This word is spelled like {0}'.format(secret_word['word']))
+        talk('You are wrong. This word is spelled like {0}'.format(secret_word ['word']))
 
 
