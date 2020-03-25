@@ -36,4 +36,12 @@ bud2 = buddy[:-3] + buddy[-2:]
 #budie = bud + buddy[3:5]
 print(bud1)
 print(bud2)
+print()
+sa,aa,ss = '11','22','33'
+print(sa + aa + ss)
+print(ss)
 
+name = input('Enter your name: ')
+sunsign=input('Enter your sunsign: ')
+sent = '%s\'s star sign is %s !!' %(name, sunsign)
+print(sent)

@@ -1,7 +1,7 @@
 # Michelia's python playground
 print("What is your name ?")
 name = input()
-print("Hello {0}".format(name))
+print("Hello {}".format(name))
 
 print("What is the month you were born ?")
 month = input().lower()
@@ -117,14 +117,42 @@ monthdays = {
     'november': (1,30),
     'december':(1,31)
 
-        }
+}
+first_last_tuple =  monthdays[month]
+first_day = first_last_tuple[0]
+last_day = first_last_tuple[1]
 
 
+try:
+    date = int(date)
+except:
+    print('A Number means an actual Number')
+    exit(0)
 
 
-print('what is your favorite color')
-color = input().lower()
+# try:
+#     first_day = int(first_day)
+# except:
+#     print('A Number means an actual Number')
+#     exit(0)
+#
+# try:
+#     last_day = int(last_day)
+# except:
+#     print('A Number means an actual Number')
+#     exit(0)
 
+# print(type(first_day))
+# print('Last date is %s !!' %(type(last_day)))
+# print('Entered date is %s' %(type(date)))
+
+if date < first_day or date > last_day :
+        print("Wut...THAT NUMBER IS OUT OF THE MONTH'S RANGE")
+else:
+    print('GoOd JoB!')
+
+print('What is your favorite color?')
+color = input()
 colors = {
     'red': 'The color red is able to boost energy! Red can also increase a person’s appetite.',
     'orange': 'Orange is aggressive but balanced — it portrays energy yet can be inviting',
